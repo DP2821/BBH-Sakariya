@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap');
+
+@import "tailwindcss";
+
+@config "../tailwind.config.js";
+@source "../src/**/*.{js,ts,jsx,tsx}";
+
+
+@layer base {
+  body {
+    @apply bg-warm-50 text-maroon-dark antialiased;
+  }
+}
+
+.hindi-text {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+.gujarati-text {
+  font-family: 'Noto Sans Gujarati', sans-serif;
+}
