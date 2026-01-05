@@ -6,11 +6,11 @@ const Darshan = () => {
     const { t } = useTranslation();
 
     const timings = [
-        { title: t('mangla_aarti'), time: '05:30 AM', type: 'morning' },
-        { title: t('shringar_aarti'), time: '07:00 AM', type: 'morning' },
-        { title: t('rajbhog_aarti'), time: '11:15 AM', type: 'morning' },
-        { title: t('darshan'), time: '04:15 PM - 09:00 PM', type: 'evening' },
-        { title: t('sandhya_aarti'), time: '07:00 PM', type: 'evening' },
+        { title: t('mangla_aarti'), time: '06:00 AM', type: 'morning' },
+        // { title: t('shringar_aarti'), time: '07:00 AM', type: 'morning' },
+        // { title: t('rajbhog_aarti'), time: '11:15 AM', type: 'morning' },
+        { title: t('darshan'), time: '06:00 AM - 10:30 PM', type: 'morning' },
+        { title: t('sandhya_aarti'), time: '06:15 PM', type: 'evening' },
     ];
 
     return (
@@ -47,10 +47,10 @@ const Darshan = () => {
                         ))}
                     </div>
 
-                    <div className="bg-maroon-dark p-6 text-center text-white">
+                    {/* <div className="bg-maroon-dark p-6 text-center text-white">
                         <h3 className="font-bold text-xl mb-2">{t('prasad_timings')}</h3>
                         <p className="text-warm-100">11:00 AM - 02:00 PM & 06:00 PM - 08:30 PM (Bhojanshala)</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

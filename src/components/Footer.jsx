@@ -22,10 +22,10 @@ const Footer = () => {
                             Join us for Darshan and seek the blessings of Anjaniputra.
                         </p>
                         <div className="flex space-x-4">
-                            <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-saffron transition-colors"><Facebook size={18} /></a>
-                            <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-saffron transition-colors"><Twitter size={18} /></a>
-                            <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-saffron transition-colors"><Instagram size={18} /></a>
-                            <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-saffron transition-colors"><Youtube size={18} /></a>
+                            <a target='_' href="https://www.facebook.com/sakariyahanuman" className="bg-white/10 p-2 rounded-full hover:bg-saffron transition-colors"><Facebook size={18} /></a>
+                            {/* <a target='_' href="#" className="bg-white/10 p-2 rounded-full hover:bg-saffron transition-colors"><Twitter size={18} /></a> */}
+                            <a target='_' href="https://www.instagram.com/sakariya_hanuman" className="bg-white/10 p-2 rounded-full hover:bg-saffron transition-colors"><Instagram size={18} /></a>
+                            <a target='_' href="https://www.youtube.com/c/SakariyaHanuman" className="bg-white/10 p-2 rounded-full hover:bg-saffron transition-colors"><Youtube size={18} /></a>
                         </div>
                     </div>
 
@@ -56,7 +56,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail className="text-saffron flex-shrink-0" size={18} />
-                                <span className="text-warm-100/80">info@sakariyahanumanji.org</span>
+                                <span className="text-warm-100/80">sakariyahanumanji@gmail.com</span>
                             </li>
                         </ul>
                     </div>

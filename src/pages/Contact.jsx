@@ -51,8 +51,8 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-lg text-gold-light mb-1">{t('email')}</h3>
-                                    <p className="text-warm-100/80">info@sakariyahanumanji.org</p>
-                                    <p className="text-warm-100/80">donations@sakariyahanumanji.org</p>
+                                    <p className="text-warm-100/80">sakariyahanumanji@gmail.com</p>
+                                    {/* <p className="text-warm-100/80">donations@sakariyahanumanji.org</p> */}
                                 </div>
                             </div>
                         </div>

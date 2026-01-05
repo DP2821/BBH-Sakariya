@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Car, Utensils, Droplets, BedDouble, Info } from 'lucide-react'; // Shoe icon substitute could be generic Info
+import { Car, Droplets, Info, Trees, ShoppingBag, Building2 } from 'lucide-react';
 
 const Facilities = () => {
     const { t } = useTranslation();
@@ -12,14 +12,19 @@ const Facilities = () => {
             description: "Ample parking space available for cars, buses, and two-wheelers. Safe and guarded premises."
         },
         {
-            icon: <Utensils size={40} className="text-saffron" />,
-            title: "Bhojanshala",
-            description: "Free and hygienic food (Prasad) served daily to thousands of devotees. Pure Sattvik meal."
+            icon: <Trees size={40} className="text-saffron" />,
+            title: "Garden & Children Play Area",
+            description: "Beautiful garden and children's play area for families to relax and kids to enjoy."
         },
         {
-            icon: <BedDouble size={40} className="text-saffron" />,
-            title: "Dharmashala",
-            description: "Clean and affordable accommodation rooms available for staying overnight. Pilgrims can book upon arrival."
+            icon: <ShoppingBag size={40} className="text-saffron" />,
+            title: "Temple Gift Shop",
+            description: "Everything you need for worship: Malas, Hanumanji Photo Frames, and headbands. We also offer packaged food, water bottles."
+        },
+        {
+            icon: <Building2 size={40} className="text-saffron" />,
+            title: "Event Facilities",
+            description: "Temple provides open ground and kitchen facilities for holding religious events and social functions."
         },
         {
             icon: <Droplets size={40} className="text-saffron" />,

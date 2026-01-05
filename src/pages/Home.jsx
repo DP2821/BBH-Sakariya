@@ -9,6 +9,7 @@ import historyImage from '../assets/16-9 Images/History_Image.jpg';
 import historyImage2 from '../assets/16-9 Images/History.jpg';
 import hanumanDada from '../assets/16-9 Images/HANUMAN DADA.jpg';
 import LiveDarshanSection from '../components/LiveDarshanSection';
+import JoinCommunitySection from '../components/JoinCommunitySection';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -115,6 +116,8 @@ const Home = () => {
             </section>
 
             <LiveDarshanSection />
+
+            <JoinCommunitySection />
 
             {/* Daily Mantra Section */}
             <section className="py-20 bg-maroon-dark text-warm-50 relative overflow-hidden" ref={mantraRef}>
