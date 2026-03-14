@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Play, Calendar, Video } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import todaysDarshanImage from '../assets/Img/DSC_0020.jpg';
+import todaysDarshanImage from '../assets/Img/DSC_0020.JPG';
 
 gsap.registerPlugin(ScrollTrigger);
 
