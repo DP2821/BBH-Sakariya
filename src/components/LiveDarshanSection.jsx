@@ -48,7 +48,7 @@ const LiveDarshanSection = () => {
                         <div className="p-6 border-b border-gray-100 flex items-center justify-between">
                             <h3 className="text-2xl font-serif font-bold text-maroon flex items-center gap-3">
                                 <Video className="text-saffron" />
-                                Live Temple View
+                                Documentary
                             </h3>
                             <span className="flex items-center gap-2 px-3 py-1 bg-red-100 text-red-600 rounded-full text-xs font-bold animate-pulse">
                                 <span className="w-2 h-2 bg-red-600 rounded-full"></span>
@@ -79,7 +79,7 @@ const LiveDarshanSection = () => {
                         <div className="p-6 border-b border-gray-100 flex items-center justify-between">
                             <h3 className="text-2xl font-serif font-bold text-maroon flex items-center gap-3">
                                 <Calendar className="text-saffron" />
-                                Today's Darshan
+                                Gallery
                             </h3>
                             <span className="text-gray-500 font-medium font-serif">
                                 {new Date().toLocaleDateString('en-IN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}

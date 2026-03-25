@@ -27,7 +27,7 @@ const Contact = () => {
                                 <div>
                                     <h3 className="font-bold text-lg text-gold-light mb-1">{t('address')}</h3>
                                     <p className="text-warm-100/80 leading-relaxed">
-                                        Bheed Bhanjan Hanuman Temple,
+                                        Bhid Bhanjan Hanuman Temple,
                                         Sakariya, Modasa,
                                         Dist. Aravalli, Gujarat - 383315
                                     </p>
@@ -40,8 +40,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-lg text-gold-light mb-1">{t('phone')}</h3>
-                                    <p className="text-warm-100/80">+91 99999 99999</p>
-                                    <p className="text-warm-100/80">+91 88888 88888</p>
+                                    <p className="text-warm-100/80">+91 79840 95771</p>
                                 </div>
                             </div>
 

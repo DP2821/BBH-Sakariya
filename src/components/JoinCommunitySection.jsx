@@ -3,7 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { MessageCircle, Smartphone } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import wpQrImage from '../assets/Img/WP_QR.png';
+// import wpQrImage from '../assets/Img/WP_QR.png';
+import wpQrImage from '../assets/Img/WP_QR.jpeg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,7 +41,7 @@ const JoinCommunitySection = () => {
                         </div>
                         <h2 className="text-3xl md:text-4xl font-serif font-bold text-maroon-dark leading-tight">
                             Stay Connected with <br />
-                            <span className="text-saffron">Shree Bheed Bhanjan Hanuman Sakariya</span>
+                            <span className="text-saffron">Shree Bhid Bhanjan Hanuman Sakariya</span>
                         </h2>
                         <p className="text-lg text-gray-600 leading-relaxed">
                             Join our official WhatsApp group to receive daily Darshan, event updates, and news directly on your phone. Be a part of our growing spiritual family.

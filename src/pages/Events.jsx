@@ -11,27 +11,19 @@ const Events = () => {
     const events = [
         {
             id: 1,
-            title: "Hanuman Jayanti Mahotsav",
-            date: "April 23, 2026",
+            title: "Hanuman Janmotsav",
+            date: "April 02, 2026",
             time: "05:00 AM Onwards",
-            description: "Grand celebration of Hanuman Jayanti with special pious rituals, Maha Aarti, and Santvani.",
+            description: "Grand celebration of Hanuman Janmotsav with special pious rituals, Maha Aarti, and Santvani.",
             image: hanumanDada
         },
         {
             id: 2,
-            title: "Annual Patotsav",
-            date: "August 15, 2026",
-            time: "08:00 AM - 01:00 PM",
-            description: "Celebrating the installation day of the deities with Vedic Chanting and Abhishek.",
+            title: "New Temple Renovation (Jinnodhar) Festival",
+            date: "22 to 24 April, 2026",
+            time: "06:00 AM Onwards",
+            description: "Celebrating the renovation of the temple with Vedic Chanting and Abhishek.",
             image: mainTemple
-        },
-        {
-            id: 3,
-            title: "Diwali Deepotsav",
-            date: "November 10, 2026",
-            time: "06:00 PM",
-            description: "Lighting of 11,000 diyas in the temple premises. A spectacular divine visual.",
-            image: utarayanEffect
         }
     ];
 
