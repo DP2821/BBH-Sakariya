@@ -8,8 +8,11 @@ import todaysDarshanImage from '../assets/Img/DSC_0020.JPG';
 gsap.registerPlugin(ScrollTrigger);
 
 const LiveDarshanSection = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const sectionRef = useRef(null);
+
+    // Dynamic locale for date
+    const dateLocale = i18n.language === 'gu' ? 'gu-IN' : i18n.language === 'hi' ? 'hi-IN' : 'en-IN';
 
     useEffect(() => {
         gsap.fromTo(sectionRef.current.children,
@@ -37,8 +40,8 @@ const LiveDarshanSection = () => {
         <section className="py-20 bg-warm-50" ref={sectionRef}>
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
-                    <span className="text-saffron font-bold tracking-wider uppercase mb-2 block">Connect Divinely</span>
-                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-maroon-dark">Live Darshan & Aart</h2>
+                    <span className="text-saffron font-bold tracking-wider uppercase mb-2 block">{t('connect_divinely')}</span>
+                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-maroon-dark">{t('live_darshan_aarti')}</h2>
                     <div className="w-24 h-1 bg-saffron mx-auto mt-6 rounded-full"></div>
                 </div>
 
@@ -48,18 +51,18 @@ const LiveDarshanSection = () => {
                         <div className="p-6 border-b border-gray-100 flex items-center justify-between">
                             <h3 className="text-2xl font-serif font-bold text-maroon flex items-center gap-3">
                                 <Video className="text-saffron" />
-                                Documentary
+                                {t('documentary')}
                             </h3>
                             <span className="flex items-center gap-2 px-3 py-1 bg-red-100 text-red-600 rounded-full text-xs font-bold animate-pulse">
                                 <span className="w-2 h-2 bg-red-600 rounded-full"></span>
-                                LIVE
+                                {t('live')}
                             </span>
                         </div>
                         <div className="aspect-video bg-black relative group">
                             <iframe
                                 className="w-full h-full"
                                 src={liveVideoUrl}
-                                title="Live Darshan"
+                                title={t('live_darshan')}
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowFullScreen
@@ -68,8 +71,7 @@ const LiveDarshanSection = () => {
                         </div>
                         <div className="p-6 bg-warm-50/50">
                             <p className="text-gray-600 text-sm">
-                                Watch live Aarti and Darshan directly from the temple premises.
-                                Morning Aarti: 7:00 AM | Evening Aarti: 7:00 PM
+                                {t('live_desc')}
                             </p>
                         </div>
                     </div>
@@ -79,28 +81,28 @@ const LiveDarshanSection = () => {
                         <div className="p-6 border-b border-gray-100 flex items-center justify-between">
                             <h3 className="text-2xl font-serif font-bold text-maroon flex items-center gap-3">
                                 <Calendar className="text-saffron" />
-                                Gallery
+                                {t('gallery')}
                             </h3>
                             <span className="text-gray-500 font-medium font-serif">
-                                {new Date().toLocaleDateString('en-IN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+                                {new Date().toLocaleDateString(dateLocale, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
                             </span>
                         </div>
                         <div className="aspect-[4/5] md:aspect-video lg:aspect-[4/3] bg-gray-100 relative overflow-hidden group">
                             <img
                                 src={todaysDarshanImage}
-                                alt="Today's Hanumanji Darshan"
+                                alt={t('todays_darshan_alt')}
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                                <p className="text-white font-medium">Jay Shree Ram • Jay Hanuman</p>
+                                <p className="text-white font-medium">{t('slogan')}</p>
                             </div>
                         </div>
                         <div className="p-6 bg-warm-50/50 flex justify-between items-center">
                             <p className="text-gray-600 text-sm">
-                                Daily image update of Hanumanji.
+                                {t('daily_image_update')}
                             </p>
                             <button className="text-saffron hover:text-saffron-dark font-bold text-sm uppercase tracking-wide transition-colors">
-                                View Gallery
+                                {t('view_gallery')}
                             </button>
                         </div>
                     </div>

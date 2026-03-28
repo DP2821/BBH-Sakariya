@@ -17,7 +17,7 @@ const Contact = () => {
                     <div className="bg-maroon-dark text-warm-50 rounded-2xl p-8 shadow-xl relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-saffron opacity-10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
 
-                        <h2 className="text-2xl font-bold text-gold mb-8">Get in Touch</h2>
+                        <h2 className="text-2xl font-bold text-gold mb-8">{t('get_in_touch')}</h2>
 
                         <div className="space-y-8 relative z-10">
                             <div className="flex items-start gap-4">
@@ -26,10 +26,8 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-lg text-gold-light mb-1">{t('address')}</h3>
-                                    <p className="text-warm-100/80 leading-relaxed">
-                                        Bhid Bhanjan Hanuman Temple,
-                                        Sakariya, Modasa,
-                                        Dist. Aravalli, Gujarat - 383315
+                                    <p className="text-warm-100/80 leading-relaxed whitespace-pre-line">
+                                        {t('full_address')}
                                     </p>
                                 </div>
                             </div>
@@ -71,27 +69,27 @@ const Contact = () => {
 
                     {/* Contact Form */}
                     <div className="bg-white rounded-2xl p-8 shadow-lg border border-maroon/10">
-                        <h2 className="text-2xl font-bold text-maroon-dark mb-6">Send us a Message</h2>
+                        <h2 className="text-2xl font-bold text-maroon-dark mb-6">{t('send_us_message')}</h2>
                         <form className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                                    <input type="text" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-saffron focus:border-transparent outline-none transition-all" placeholder="Ram" />
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">{t('first_name')}</label>
+                                    <input type="text" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-saffron focus:border-transparent outline-none transition-all" placeholder={t('placeholder_first_name')} />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                                    <input type="text" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-saffron focus:border-transparent outline-none transition-all" placeholder="Sharma" />
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">{t('last_name')}</label>
+                                    <input type="text" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-saffron focus:border-transparent outline-none transition-all" placeholder={t('placeholder_last_name')} />
                                 </div>
                             </div>
 
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                                <input type="email" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-saffron focus:border-transparent outline-none transition-all" placeholder="ram@example.com" />
+                                <label className="block text-sm font-medium text-gray-700 mb-2">{t('email_address')}</label>
+                                <input type="email" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-saffron focus:border-transparent outline-none transition-all" placeholder={t('placeholder_email')} />
                             </div>
 
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                                <textarea rows="4" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-saffron focus:border-transparent outline-none transition-all" placeholder="Jai Bajrangbali..."></textarea>
+                                <label className="block text-sm font-medium text-gray-700 mb-2">{t('message')}</label>
+                                <textarea rows="4" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-saffron focus:border-transparent outline-none transition-all" placeholder={t('placeholder_message')}></textarea>
                             </div>
 
                             <button type="button" className="w-full bg-saffron hover:bg-saffron-dark text-white font-bold py-4 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">

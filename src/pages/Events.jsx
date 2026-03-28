@@ -11,18 +11,18 @@ const Events = () => {
     const events = [
         {
             id: 1,
-            title: "Hanuman Janmotsav",
-            date: "April 02, 2026",
-            time: "05:00 AM Onwards",
-            description: "Grand celebration of Hanuman Janmotsav with special pious rituals, Maha Aarti, and Santvani.",
+            title: t('hanuman_janmotsav'),
+            date: t('hanuman_janmotsav_date'),
+            time: t('hanuman_janmotsav_time'),
+            description: t('hanuman_janmotsav_desc'),
             image: hanumanDada
         },
         {
             id: 2,
-            title: "New Temple Renovation (Jinnodhar) Festival",
-            date: "22 to 24 April, 2026",
-            time: "06:00 AM Onwards",
-            description: "Celebrating the renovation of the temple with Vedic Chanting and Abhishek.",
+            title: t('temple_renovation_fest'),
+            date: t('temple_renovation_date'),
+            time: t('temple_renovation_time'),
+            description: t('temple_renovation_desc'),
             image: mainTemple
         }
     ];
@@ -40,7 +40,7 @@ const Events = () => {
                             <div className="h-48 relative overflow-hidden">
                                 <img src={event.image} alt={event.title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
                                 <div className="absolute top-0 right-0 bg-saffron text-white px-3 py-1 m-2 rounded text-sm font-bold shadow-md">
-                                    Upcoming
+                                    {t('upcoming')}
                                 </div>
                             </div>
                             <div className="p-6">
@@ -56,7 +56,7 @@ const Events = () => {
                                 </p>
                                 <div className="flex items-center gap-2 text-gray-400 text-xs">
                                     <MapPin size={14} />
-                                    Sakariya Temple Grounds
+                                    {t('sakariya_temple_grounds')}
                                 </div>
                             </div>
                         </div>

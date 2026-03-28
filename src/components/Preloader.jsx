@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 
 const Preloader = ({ onComplete }) => {
+    const { t } = useTranslation();
     const containerRef = useRef(null);
     const flameRef = useRef(null);
     const textRef = useRef(null);
@@ -52,7 +54,7 @@ const Preloader = ({ onComplete }) => {
             </div>
 
             <h1 ref={textRef} className="mt-6 text-2xl font-serif font-bold tracking-widest text-gold text-center">
-                JAY SHREE RAM
+                {t('jay_shree_ram')}
             </h1>
         </div>
     );

@@ -83,7 +83,7 @@ const Home = () => {
 
                 <div className="container mx-auto px-6 relative z-20 text-center" ref={heroRef}>
                     <div className="inline-block mb-4 p-2 bg-saffron/10 rounded-full border border-saffron/20 backdrop-blur-sm">
-                        <span className="text-gold font-medium px-4 py-1">Jai Bajrangbali</span>
+                        <span className="text-gold font-medium px-4 py-1">{t('jai_bajrangbali')}</span>
                     </div>
                     <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight">
                         {t('welcome')}
@@ -101,7 +101,7 @@ const Home = () => {
                         <Link to="/events">
                             <button className="bg-white hover:bg-warm-100 text-maroon border-2 border-maroon/10 px-8 py-4 rounded-full font-bold text-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
                                 <Calendar size={20} />
-                                Upcoming Events
+                                {t('upcoming_events_btn')}
                             </button>
                         </Link>
                     </div>
@@ -150,17 +150,17 @@ const Home = () => {
                                     />
                                 ))}
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6 z-10">
-                                    <span className="text-white font-medium">Ancient Sleeping Idol</span>
+                                    <span className="text-white font-medium">{t('ancient_sleeping_idol')}</span>
                                 </div>
                             </div>
                         </div>
                         <div className="md:w-1/2">
-                            <h3 className="text-saffron-dark font-bold uppercase tracking-wider mb-2">Heritage</h3>
+                            <h3 className="text-saffron-dark font-bold uppercase tracking-wider mb-2">{t('heritage')}</h3>
                             <h2 className="text-4xl font-serif font-bold text-maroon-dark mb-6">{t('about_title')}</h2>
                             <p className="text-lg text-maroon/80 leading-relaxed mb-8">
                                 {t('about_text')}
                                 <br /><br />
-                                Experience the divine atmosphere and find inner peace. The temple architecture is a marvel of ancient Indian craftsmanship.
+                                {t('about_description_2')}
                             </p>
                             <button className="group text-saffron-dark font-bold text-lg flex items-center gap-2 hover:gap-4 transition-all">
                                 {t('explore_more')} <ArrowRight size={20} />

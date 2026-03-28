@@ -8,38 +8,38 @@ const Facilities = () => {
     const facilities = [
         {
             icon: <Car size={40} className="text-saffron" />,
-            title: "Spacious Parking",
-            description: "Ample parking space available for cars, buses, and two-wheelers. Safe and guarded premises."
+            title: t('parking_title'),
+            description: t('parking_desc')
         },
         {
             icon: <Trees size={40} className="text-saffron" />,
-            title: "Garden & Children Play Area",
-            description: "Beautiful garden and children's play area for families to relax and kids to enjoy."
+            title: t('garden_title'),
+            description: t('garden_desc')
         },
         {
             icon: <ShoppingBag size={40} className="text-saffron" />,
-            title: "Temple Gift Shop",
-            description: "Everything you need for worship: Malas, Hanumanji Photo Frames, and headbands. We also offer packaged food, water bottles."
+            title: t('gift_shop_title'),
+            description: t('gift_shop_desc')
         },
         {
             icon: <Building2 size={40} className="text-saffron" />,
-            title: "Event Facilities",
-            description: "Temple provides open ground and kitchen facilities for holding religious events and social functions."
+            title: t('event_facilities_title'),
+            description: t('event_facilities_desc')
         },
         {
             icon: <Droplets size={40} className="text-saffron" />,
-            title: "RO Water",
-            description: "Chilled and purified drinking water stations available at multiple points in the campus."
+            title: t('ro_water_title'),
+            description: t('ro_water_desc')
         },
         {
             icon: <div className="text-saffron font-bold text-3xl border-2 border-saffron rounded px-2">👠</div>,
-            title: "Shoe Stand",
-            description: "Free shoe keeping facility managed by volunteers to keep your footwear safe while you do Darshan."
+            title: t('shoe_stand_title'),
+            description: t('shoe_stand_desc')
         },
         {
             icon: <Info size={40} className="text-saffron" />,
-            title: "Wheelchair Assistance",
-            description: "Wheelchairs available for elderly and differently-abled devotees at the main gate."
+            title: t('wheelchair_title'),
+            description: t('wheelchair_desc')
         }
     ];
 

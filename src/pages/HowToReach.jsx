@@ -15,48 +15,48 @@ const HowToReach = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
                     <div className="bg-white rounded-xl shadow-lg p-8">
                         <h2 className="text-2xl font-bold text-maroon mb-6 flex items-center gap-2">
-                            <Train className="text-saffron" /> By Railway
+                            <Train className="text-saffron" /> {t('by_railway')}
                         </h2>
                         <ul className="space-y-4 text-gray-700">
                             <li className="flex items-start gap-3">
                                 <span className="w-2 h-2 bg-saffron rounded-full mt-2 flex-shrink-0"></span>
-                                <span><strong>Botad Junction:</strong> The nearest major railway station, approximately 12 km away.</span>
+                                <span><strong>{t('botad_junction_text')}</strong> {t('botad_junction_desc')}</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="w-2 h-2 bg-saffron rounded-full mt-2 flex-shrink-0"></span>
-                                <span><strong>Ahmedabad Junction:</strong> About 150 km away. Connected to all major cities.</span>
+                                <span><strong>{t('ahmedabad_junction_text')}</strong> {t('ahmedabad_junction_desc')}</span>
                             </li>
                         </ul>
                     </div>
 
                     <div className="bg-white rounded-xl shadow-lg p-8">
                         <h2 className="text-2xl font-bold text-maroon mb-6 flex items-center gap-2">
-                            <Bus className="text-saffron" /> By Bus / Road
+                            <Bus className="text-saffron" /> {t('by_bus_road')}
                         </h2>
                         <ul className="space-y-4 text-gray-700">
                             <li className="flex items-start gap-3">
                                 <span className="w-2 h-2 bg-saffron rounded-full mt-2 flex-shrink-0"></span>
-                                <span>Direct GSRTC buses are available from Ahmedabad, Rajkot, Bhavnagar, and Botad.</span>
+                                <span>{t('bus_details_1')}</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="w-2 h-2 bg-saffron rounded-full mt-2 flex-shrink-0"></span>
-                                <span>Private luxury buses and taxis are also frequently available.</span>
+                                <span>{t('bus_details_2')}</span>
                             </li>
                         </ul>
                     </div>
 
                     <div className="bg-white rounded-xl shadow-lg p-8">
                         <h2 className="text-2xl font-bold text-maroon mb-6 flex items-center gap-2">
-                            <Plane className="text-saffron" /> By Air
+                            <Plane className="text-saffron" /> {t('by_air')}
                         </h2>
                         <ul className="space-y-4 text-gray-700">
                             <li className="flex items-start gap-3">
                                 <span className="w-2 h-2 bg-saffron rounded-full mt-2 flex-shrink-0"></span>
-                                <span><strong>Sardar Vallabhbhai Patel International Airport (Ahmedabad):</strong> The nearest international airport (approx 160 km).</span>
+                                <span><strong>{t('airport_ahmedabad_text')}</strong> {t('airport_ahmedabad_desc')}</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="w-2 h-2 bg-saffron rounded-full mt-2 flex-shrink-0"></span>
-                                <span><strong>Bhavnagar Airport:</strong> Domestic airport (approx 75 km).</span>
+                                <span><strong>{t('airport_bhavnagar_text')}</strong> {t('airport_bhavnagar_desc')}</span>
                             </li>
                         </ul>
                     </div>

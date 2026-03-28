@@ -29,10 +29,10 @@ const HolyMemories = () => {
     const events = [
         {
             id: 1,
-            title: 'Diwali Celebrations',
-            date: 'November 4, 2024',
+            title: t('diwali_title'),
+            date: t('diwali_date'),
             category: 'festivals',
-            description: 'Grand celebration of the festival of lights with special rituals, lamps, and cultural performances.',
+            description: t('diwali_desc'),
             coverImage: deepmala,
             gallery: [
                 rangoli,
@@ -43,10 +43,10 @@ const HolyMemories = () => {
         },
         {
             id: 2,
-            title: 'Satyanarayana Puja',
-            date: 'Monthly - Last Friday',
+            title: t('satyanarayana_puja_title'),
+            date: t('satyanarayana_puja_date'),
             category: 'poojas',
-            description: 'Monthly community Satyanarayana puja performed for the well-being of devotees.',
+            description: t('satyanarayana_puja_desc'),
             coverImage: puja,
             gallery: [
                 havan,
@@ -56,10 +56,10 @@ const HolyMemories = () => {
         },
         {
             id: 3,
-            title: 'Janmashtami',
-            date: 'August 26, 2024',
+            title: t('janmashtami_title'),
+            date: t('janmashtami_date'),
             category: 'festivals',
-            description: 'celebrating the birth of Lord Krishna with fervor and joy.',
+            description: t('janmashtami_desc'),
             coverImage: murti,
             gallery: [
                 shringar,
@@ -69,21 +69,20 @@ const HolyMemories = () => {
         },
         {
             id: 4,
-            title: 'Rudrabhishekam',
-            date: 'Mondays',
+            title: t('rudrabhishekam_title'),
+            date: t('mondays'),
             category: 'poojas',
-            description: 'Special Rudrabhishekam performed every Monday.',
+            description: t('rudrabhishekam_desc'),
             coverImage: hanumanji,
             gallery: [
                 hanumanji2,
                 abhishek
             ]
         }
-
     ];
 
     const tabs = [
-        { id: 'all', label: 'All' }, // You might want to translate 'All' too if needed, or just default show all
+        { id: 'all', label: t('all') },
         { id: 'festivals', label: t('festivals') },
         { id: 'poojas', label: t('poojas') },
         { id: 'yatras', label: t('yatras') },
@@ -153,11 +152,6 @@ const HolyMemories = () => {
                                                 <Calendar className="w-4 h-4 mr-1" />
                                                 {event.date}
                                             </span>
-                                            {/* You could add location if generic often */}
-                                            {/* <span className="flex items-center text-stone-500">
-                        <MapPin className="w-4 h-4 mr-1" />
-                        Temple Premises
-                      </span> */}
                                         </div>
 
                                         <h2 className="text-2xl md:text-3xl font-serif font-bold text-maroon mb-3">
@@ -174,7 +168,7 @@ const HolyMemories = () => {
                                         <div className="mt-4">
                                             <h3 className="text-maroon font-medium mb-3 flex items-center">
                                                 <ImageIcon className="w-4 h-4 mr-2" />
-                                                {t('explore_more') || 'Photo Gallery'}
+                                                {t('photo_gallery')}
                                             </h3>
                                             <div className="flex gap-3 overflow-x-auto pb-2">
                                                 {event.gallery.map((img, idx) => (
@@ -190,10 +184,6 @@ const HolyMemories = () => {
                                                         />
                                                     </div>
                                                 ))}
-                                                {/* Placeholder for 'See more' if needed later */}
-                                                {/* <div className="flex-shrink-0 w-24 h-24 rounded-lg bg-stone-100 flex items-center justify-center text-stone-400 text-xs font-medium border border-stone-200">
-                          +More
-                        </div> */}
                                             </div>
                                         </div>
                                     )}
@@ -204,7 +194,7 @@ const HolyMemories = () => {
 
                     {filteredEvents.length === 0 && (
                         <div className="text-center py-20 text-stone-500">
-                            <p className="text-xl">No events found in this category.</p>
+                            <p className="text-xl">{t('no_events_found')}</p>
                         </div>
                     )}
                 </div>

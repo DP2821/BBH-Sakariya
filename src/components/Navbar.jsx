@@ -51,7 +51,7 @@ const Navbar = () => {
                             <img src={logo} alt="Logo" className="w-full h-full object-cover" />
                         </div>
                         <span className={`font-serif font-bold text-xl tracking-wide ${scrolled ? 'text-maroon-dark' : 'text-maroon-dark'}`}>
-                            Sakariya Hanumanji
+                            {t('brand_name')}
                         </span>
                     </Link>
 

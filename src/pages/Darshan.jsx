@@ -23,8 +23,8 @@ const Darshan = () => {
 
                 <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-maroon/10">
                     <div className="bg-saffron text-white p-6 text-center">
-                        <h2 className="text-2xl font-bold">Daily Schedule</h2>
-                        <p className="opacity-90">Open Everyday</p>
+                        <h2 className="text-2xl font-bold">{t('daily_schedule')}</h2>
+                        <p className="opacity-90">{t('open_everyday')}</p>
                     </div>
 
                     <div className="p-6 md:p-10 divide-y divide-gray-100">

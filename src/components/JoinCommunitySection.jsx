@@ -37,14 +37,14 @@ const JoinCommunitySection = () => {
                     <div className="md:w-1/2 space-y-6">
                         <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-bold animate-pulse">
                             <MessageCircle size={18} />
-                            <span>Join Our Community</span>
+                            <span>{t('join_community')}</span>
                         </div>
                         <h2 className="text-3xl md:text-4xl font-serif font-bold text-maroon-dark leading-tight">
-                            Stay Connected with <br />
-                            <span className="text-saffron">Shree Bhid Bhanjan Hanuman Sakariya</span>
+                            {t('stay_connected_with')} <br />
+                            <span className="text-saffron">{t('brand_name')}</span>
                         </h2>
                         <p className="text-lg text-gray-600 leading-relaxed">
-                            Join our official WhatsApp group to receive daily Darshan, event updates, and news directly on your phone. Be a part of our growing spiritual family.
+                            {t('whatsapp_desc')}
                         </p>
 
                         <div className="flex items-center gap-4 text-maroon font-medium">
@@ -52,8 +52,8 @@ const JoinCommunitySection = () => {
                                 <Smartphone size={24} />
                             </div>
                             <div>
-                                <p className="text-sm text-gray-500">Scan the QR code</p>
-                                <p>or click the link to join</p>
+                                <p className="text-sm text-gray-500">{t('scan_qr_code')}</p>
+                                <p>{t('click_to_join')}</p>
                             </div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@ const JoinCommunitySection = () => {
                                     className="w-64 h-64 md:w-80 md:h-80 object-contain rounded-lg"
                                 />
                                 <div className="mt-4 text-center">
-                                    <p className="text-xs text-gray-400 uppercase tracking-widest font-bold">Scan to Join</p>
+                                    <p className="text-xs text-gray-400 uppercase tracking-widest font-bold">{t('scan_to_join')}</p>
                                 </div>
                             </div>
                         </div>
