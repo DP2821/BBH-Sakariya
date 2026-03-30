@@ -38,8 +38,9 @@ const Navbar = () => {
         { name: t('holy_memories'), path: '/holy-memories' },
         { name: t('darshan'), path: '/darshan' },
         { name: t('events_title'), path: '/events' },
+        { name: t('poster_maker'), path: '/poster', highlight: true },
         { name: t('mandir_facilities'), path: '/facilities' },
-        { name: t('contact_title'), path: '/contact' },
+        // { name: t('contact_title'), path: '/contact' },
     ];
 
     return (
@@ -60,8 +61,18 @@ const Navbar = () => {
                             <Link
                                 key={link.path}
                                 to={link.path}
-                                className="text-maroon hover:text-saffron font-medium transition-colors duration-200 relative group text-sm uppercase tracking-wide"
+                                className={`transition-colors duration-200 relative group text-sm uppercase tracking-wide inline-block ${
+                                    link.highlight 
+                                        ? 'text-saffron font-bold drop-shadow-sm hover:brightness-110' 
+                                        : 'text-maroon hover:text-saffron font-medium'
+                                }`}
                             >
+                                {link.highlight && (
+                                    <span className="absolute -top-1 -right-3 flex h-2 w-2">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#f2c75c] opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#f2c75c]"></span>
+                                    </span>
+                                )}
                                 {link.name}
                                 <span className="absolute bottom-[-4px] left-0 w-0 h-0.5 bg-saffron transition-all duration-300 group-hover:w-full"></span>
                             </Link>
@@ -103,9 +114,19 @@ const Navbar = () => {
                         <Link
                             key={link.path}
                             to={link.path}
-                            className="block px-3 py-3 rounded-md text-base font-medium text-maroon hover:bg-warm-100 hover:text-saffron transition-colors"
+                            className={`block px-3 py-3 rounded-md text-base transition-colors flex justify-between items-center ${
+                                link.highlight
+                                    ? 'font-bold text-saffron bg-[#f2c75c]/10 border-l-4 border-[#f2c75c]'
+                                    : 'font-medium text-maroon hover:bg-warm-100 hover:text-saffron'
+                            }`}
                         >
-                            {link.name}
+                            <span>{link.name}</span>
+                            {link.highlight && (
+                                <span className="relative flex h-2 w-2 mr-2">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#f2c75c] opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#f2c75c]"></span>
+                                </span>
+                            )}
                         </Link>
                     ))}
                     <div className="pt-4">

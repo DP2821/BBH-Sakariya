@@ -153,5 +153,16 @@
     "airport_ahmedabad_text": "सरदार वल्लभभाई पटेल अंतर्राष्ट्रीय हवाई अड्डा (अहमदाबाद):",
     "airport_ahmedabad_desc": "निकटतम अंतर्राष्ट्रीय हवाई अड्डा (लगभग 160 किमी)।",
     "airport_bhavnagar_text": "भावनगर हवाई अड्डा:",
-    "airport_bhavnagar_desc": "घरेलू हवाई अड्डा (लगभग 75 किमी)।"
+    "airport_bhavnagar_desc": "घरेलू हवाई अड्डा (लगभग 75 किमी)।",
+    "poster_maker": "पोस्टर बनाएं",
+    "create_your_poster": "अपना पोस्टर बनाएं",
+    "select_your_photo": "अपनी तस्वीर चुनें",
+    "your_name": "आपका नाम",
+    "your_mobile": "आपका मोबाइल नंबर",
+    "generate_poster": "पोस्टर बनाएं",
+    "download_poster": "पोस्टर डाउनलोड करें",
+    "loading": "लोड हो रहा है...",
+    "preview": "पूर्वावलोकन",
+    "please_select_photo": "कृपया अपनी तस्वीर चुनें",
+    "error_loading_template": "टेम्पलेट चित्र लोड करने में त्रुटि। कृपया पुनः प्रयास करें।"
 }

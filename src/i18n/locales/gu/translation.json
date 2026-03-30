@@ -153,5 +153,16 @@
     "airport_ahmedabad_text": "સરદાર વલ્લભભાઈ પટેલ આંતરરાષ્ટ્રીય એરપોર્ટ (અમદાવાદ):",
     "airport_ahmedabad_desc": "નજીકનું આંતરરાષ્ટ્રીય એરપોર્ટ (આશરે ૧૬૦ કિમી).",
     "airport_bhavnagar_text": "ભાવનગર એરપોર્ટ:",
-    "airport_bhavnagar_desc": "ડોમેસ્ટિક એરપોર્ટ (આશરે ૭૫ કિમી)."
+    "airport_bhavnagar_desc": "ડોમેસ્ટિક એરપોર્ટ (આશરે ૭૫ કિમી).",
+    "poster_maker": "પોસ્ટર બનાવો",
+    "create_your_poster": "તમારું પોસ્ટર બનાવો",
+    "select_your_photo": "તમારો ફોટો પસંદ કરો",
+    "your_name": "તમારું નામ",
+    "your_mobile": "તમારો મોબાઈલ નંબર",
+    "generate_poster": "પોસ્ટર બનાવો",
+    "download_poster": "પોસ્ટર ડાઉનલોડ કરો",
+    "loading": "લોડ થઈ રહ્યું છે...",
+    "preview": "પૂર્વાવલોકન",
+    "please_select_photo": "કૃપા કરીને તમારો ફોટો પસંદ કરો",
+    "error_loading_template": "ટેમ્પલેટ છબીઓ લોડ કરવામાં ભૂલ. કૃપા કરીને ફરી પ્રયાસ કરો."
 }

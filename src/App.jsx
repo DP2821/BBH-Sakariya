@@ -10,6 +10,7 @@ import HowToReach from './pages/HowToReach';
 import Donation from './pages/Donation';
 import Preloader from './components/Preloader';
 import HolyMemories from './pages/HolyMemories';
+import PosterMaker from './pages/PosterMaker';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -24,6 +25,7 @@ function App() {
             <Route path="holy-memories" element={<HolyMemories />} />
             <Route path="darshan" element={<Darshan />} />
             <Route path="events" element={<Events />} />
+            <Route path="poster" element={<PosterMaker />} />
             <Route path="contact" element={<Contact />} />
             <Route path="facilities" element={<Facilities />} />
             <Route path="how-to-reach" element={<HowToReach />} />

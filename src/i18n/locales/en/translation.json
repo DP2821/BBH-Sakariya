@@ -153,5 +153,16 @@
     "airport_ahmedabad_text": "Sardar Vallabhbhai Patel International Airport (Ahmedabad):",
     "airport_ahmedabad_desc": "The nearest international airport (approx 160 km).",
     "airport_bhavnagar_text": "Bhavnagar Airport:",
-    "airport_bhavnagar_desc": "Domestic airport (approx 75 km)."
+    "airport_bhavnagar_desc": "Domestic airport (approx 75 km).",
+    "poster_maker": "Poster Maker",
+    "create_your_poster": "Create Your Poster",
+    "select_your_photo": "Select Your Photo",
+    "your_name": "Your Name",
+    "your_mobile": "Your Mobile Number",
+    "generate_poster": "Generate Poster",
+    "download_poster": "Download Poster",
+    "loading": "Loading...",
+    "preview": "Preview",
+    "please_select_photo": "Please select your photo",
+    "error_loading_template": "Error loading template images. Please try again."
 }
