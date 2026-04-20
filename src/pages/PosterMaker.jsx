@@ -3,19 +3,21 @@ import { useTranslation } from 'react-i18next';
 import Cropper from 'react-cropper';
 import 'cropperjs/dist/cropper.css';
 
-import bannerTopImg from '../assets/Img/poster/Banner-2026.jpeg';
-import bannerTemplateImg from '../assets/Img/poster/Banner Main-2026.jpeg';
+import bannerTopImg from '../assets/Img/poster/Banner-Jinnodhar.jpeg';
+import bannerTemplateImg from '../assets/Img/poster/Banner-Main-Jinnodhar.jpeg';
 import defaultPersonImg from '../assets/Img/poster/person.png';
 
 const POSTER_CONFIG = {
-  imageX: 589,
-  imageY: 832,
-  imageW: 272,
-  imageH: 290,
-  textY: 1186,
-  textCenterX: 725,
-  font: '600 40px "Noto Sans Gujarati", Arial, sans-serif',
-  textColor: '#FF3434',
+  imageX: 476,
+  imageY: 840,
+  imageW: 262,
+  imageH: 262,
+  textY: 1150,
+  textCenterX: 608,
+  font: '400 35px "Noto Sans Gujarati", Arial, sans-serif',
+  textColor: '#f2c75c',
+  autoPreview: false, // Set to true to show preview automatically on upload/change
+  downloadFilename: 'Jinnodhar_invitation_2026.png',
 };
 
 const PosterMaker = () => {
@@ -85,11 +87,13 @@ const PosterMaker = () => {
     }
   };
 
-  const generatePoster = () => {
+  const generatePoster = (shouldDownload = true) => {
     if (image === defaultPersonImg) {
-      alert(t('please_select_photo'));
+      if (shouldDownload) alert(t('please_select_photo'));
       return;
     }
+
+    if (!shouldDownload && !POSTER_CONFIG.autoPreview) return;
 
     setIsGenerating(true);
 
@@ -114,7 +118,7 @@ const PosterMaker = () => {
         const roundedCanvas = getRoundedCanvas(croppedCanvas);
 
         const canvas = document.createElement('canvas');
-        canvas.width = 960;
+        canvas.width = 756;
         canvas.height = 1280;
         const ctx = canvas.getContext('2d');
 
@@ -148,21 +152,23 @@ const PosterMaker = () => {
             setPreviewUrl(dataUrl);
             setIsGenerating(false);
 
-            // Auto Download
-            const link = document.createElement('a');
-            link.download = 'hanuman_janmostav_invitation_2026.png';
-            link.href = dataUrl;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+            if (shouldDownload) {
+              // Auto Download
+              const link = document.createElement('a');
+              link.download = POSTER_CONFIG.downloadFilename;
+              link.href = dataUrl;
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
 
-            // Log Data
-            insertExpense(finalName, mobile);
+              // Log Data
+              insertExpense(finalName, mobile);
 
-            // Scroll to preview
-            setTimeout(() => {
-              previewSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 100);
+              // Scroll to preview
+              setTimeout(() => {
+                previewSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }, 100);
+            }
           };
           secondImage.src = roundedCanvas.toDataURL();
         };
@@ -179,10 +185,20 @@ const PosterMaker = () => {
     }, 50);
   };
 
+  // Auto-preview effect
+  useEffect(() => {
+    if (POSTER_CONFIG.autoPreview && image !== defaultPersonImg) {
+      const timer = setTimeout(() => {
+        generatePoster(false);
+      }, 500); // Small debounce
+      return () => clearTimeout(timer);
+    }
+  }, [image, name]);
+
   const handleManualDownload = () => {
     if (previewUrl) {
       const link = document.createElement('a');
-      link.download = 'hanuman_janmostav_invitation_2026.png';
+      link.download = POSTER_CONFIG.downloadFilename;
       link.href = previewUrl;
       document.body.appendChild(link);
       link.click();
@@ -191,11 +207,11 @@ const PosterMaker = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#3e070c] bg-[radial-gradient(circle_at_top,_#4d0910,_#2c0306)] pt-24 pb-12 font-['Noto_Sans_Gujarati',_sans-serif] text-[#f2c75c]">
+    <div className="min-h-screen bg-[#3d0541] bg-[radial-gradient(circle_at_top,_#5c0861,_#2d042f)] pt-24 pb-12 font-['Noto_Sans_Gujarati',_sans-serif] text-[#f2c75c]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Main Card */}
-        <div className="bg-[#4f0a12] border-2 border-[#f2c75c] rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.7)] p-6 md:p-10 mb-8">
+        <div className="bg-[#5c0861] border-2 border-[#f2c75c] rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.7)] p-6 md:p-10 mb-8">
 
           <div className="flex flex-col lg:flex-row gap-10">
             {/* Form Section */}
@@ -248,7 +264,7 @@ const PosterMaker = () => {
 
               <button
                 onClick={() => fileInputRef.current?.click()}
-                className="w-full bg-[#f2c75c] hover:bg-[#ffda78] text-[#3e070c] hover:text-[#290407] font-bold py-3 px-4 rounded-lg transition-all duration-200 shadow-[0_4px_10px_rgba(242,199,92,0.3)] hover:shadow-[0_6px_15px_rgba(242,199,92,0.4)] hover:-translate-y-[2px] mb-4"
+                className="w-full bg-[#f2c75c] hover:bg-[#ffda78] text-[#3d0541] hover:text-[#290407] font-bold py-3 px-4 rounded-lg transition-all duration-200 shadow-[0_4px_10px_rgba(242,199,92,0.3)] hover:shadow-[0_6px_15px_rgba(242,199,92,0.4)] hover:-translate-y-[2px] mb-4"
               >
                 {t('select_your_photo')}
               </button>
@@ -259,7 +275,7 @@ const PosterMaker = () => {
                 onChange={(e) => setName(e.target.value)}
                 maxLength="15"
                 placeholder={t('your_name')}
-                className="w-full border-2 border-[#f2c75c] bg-[#fff9ed] text-[#3e070c] font-semibold p-3 rounded-lg focus:outline-none focus:ring-4 focus:ring-[#f2c75c]/50 mb-4 placeholder-[#3e070c]/60"
+                className="w-full border-2 border-[#f2c75c] bg-[#fff9ed] text-[#3d0541] font-semibold p-3 rounded-lg focus:outline-none focus:ring-4 focus:ring-[#f2c75c]/50 mb-4 placeholder-[#3d0541]/60"
               />
 
               <input
@@ -268,16 +284,16 @@ const PosterMaker = () => {
                 onChange={(e) => setMobile(e.target.value)}
                 maxLength="10"
                 placeholder={t('your_mobile')}
-                className="w-full border-2 border-[#f2c75c] bg-[#fff9ed] text-[#3e070c] font-semibold p-3 rounded-lg focus:outline-none focus:ring-4 focus:ring-[#f2c75c]/50 mb-6 placeholder-[#3e070c]/60"
+                className="w-full border-2 border-[#f2c75c] bg-[#fff9ed] text-[#3d0541] font-semibold p-3 rounded-lg focus:outline-none focus:ring-4 focus:ring-[#f2c75c]/50 mb-6 placeholder-[#3d0541]/60"
               />
 
               <button
                 onClick={generatePoster}
                 disabled={isGenerating}
-                className="w-full bg-[#f2c75c] hover:bg-[#ffda78] text-[#3e070c] hover:text-[#290407] font-bold py-3 px-4 rounded-lg transition-all duration-200 shadow-[0_4px_10px_rgba(242,199,92,0.3)] hover:shadow-[0_6px_15px_rgba(242,199,92,0.4)] hover:-translate-y-[2px] disabled:opacity-70 disabled:hover:-translate-y-0 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full bg-[#f2c75c] hover:bg-[#ffda78] text-[#3d0541] hover:text-[#290407] font-bold py-3 px-4 rounded-lg transition-all duration-200 shadow-[0_4px_10px_rgba(242,199,92,0.3)] hover:shadow-[0_6px_15px_rgba(242,199,92,0.4)] hover:-translate-y-[2px] disabled:opacity-70 disabled:hover:-translate-y-0 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {isGenerating && (
-                  <svg className="animate-spin h-5 w-5 text-[#3e070c]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <svg className="animate-spin h-5 w-5 text-[#3d0541]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
@@ -302,7 +318,7 @@ const PosterMaker = () => {
 
                 <button
                   onClick={handleManualDownload}
-                  className="w-full max-w-[350px] bg-[#f2c75c] hover:bg-[#ffda78] text-[#3e070c] hover:text-[#290407] font-bold py-3 px-4 rounded-lg transition-all duration-200 shadow-[0_4px_10px_rgba(242,199,92,0.3)] hover:shadow-[0_6px_15px_rgba(242,199,92,0.4)] hover:-translate-y-[2px]"
+                  className="w-full max-w-[350px] bg-[#f2c75c] hover:bg-[#ffda78] text-[#3d0541] hover:text-[#290407] font-bold py-3 px-4 rounded-lg transition-all duration-200 shadow-[0_4px_10px_rgba(242,199,92,0.3)] hover:shadow-[0_6px_15px_rgba(242,199,92,0.4)] hover:-translate-y-[2px]"
                 >
                   {t('download_poster')}
                 </button>
